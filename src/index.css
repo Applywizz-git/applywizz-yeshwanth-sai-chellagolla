@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import 'aos/dist/aos.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 3D Skillverse Design System - Dark/Light Themes + Accent Presets */
+
+@layer base {
+  /* Dark Theme (Default) */
+  :root {
+    /* Brand Colors - Dark Mode */
+    --ink-navy: 215 50% 7%;
+    --charcoal: 216 33% 7%;
+    --ivory-mist: 40 15% 97%;
+    --teal-accent: 173 80% 40%;
+    --royal-violet: 258 90% 58%;
+    --slate-mute: 215 16% 47%;
+    --amber-glow: 38 92% 50%;
+    --success-green: 142 71% 45%;
+
+    /* Semantic Tokens - Dark */
+    --background: var(--ink-navy);
+    --foreground: var(--ivory-mist);
+    --card: var(--charcoal);
+    --card-foreground: var(--ivory-mist);
+    --popover: var(--charcoal);
+    --popover-foreground: var(--ivory-mist);
+    --primary: var(--teal-accent);
+    --primary-foreground: 215 50% 7%;
+    --secondary: var(--royal-violet);
+    --secondary-foreground: var(--ivory-mist);
+    --muted: 215 16% 20%;
+    --muted-foreground: var(--slate-mute);
+    --accent: var(--amber-glow);
+    --accent-foreground: 215 50% 7%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: var(--ivory-mist);
+    --border: 215 16% 20%;
+    --input: 215 16% 20%;
+    --ring: var(--teal-accent);
+    --radius: 0.75rem;
+
+    /* 3D Scene Colors */
+    --scene-primary: var(--teal-accent);
+    --scene-secondary: var(--royal-violet);
+    --scene-glow: var(--amber-glow);
+  }
+
+  /* Light Theme */
+  [data-theme="light"] {
+    --ink-navy: 40 15% 97%;
+    --charcoal: 0 0% 100%;
+    --ivory-mist: 215 50% 7%;
+    --teal-accent: 173 80% 35%;
+    --royal-violet: 258 90% 48%;
+    --slate-mute: 215 16% 40%;
+    --amber-glow: 38 92% 45%;
+    --success-green: 142 71% 40%;
+
+    --background: var(--ink-navy);
+    --foreground: var(--ivory-mist);
+    --card: var(--charcoal);
+    --card-foreground: var(--ivory-mist);
+    --popover: var(--charcoal);
+    --popover-foreground: var(--ivory-mist);
+    --primary: var(--teal-accent);
+    --primary-foreground: 0 0% 100%;
+    --secondary: var(--royal-violet);
+    --secondary-foreground: 0 0% 100%;
+    --muted: 215 16% 90%;
+    --muted-foreground: var(--slate-mute);
+    --accent: var(--amber-glow);
+    --accent-foreground: 0 0% 100%;
+    --border: 215 16% 85%;
+    --input: 215 16% 85%;
+    --ring: var(--teal-accent);
+  }
+
+  /* Accent Preset: Cyan Pulse */
+  [data-accent="cyan"] {
+    --teal-accent: 188 94% 37%;
+    --royal-violet: 258 90% 58%;
+    --amber-glow: 38 92% 50%;
+    --primary: var(--teal-accent);
+    --secondary: var(--royal-violet);
+    --accent: var(--amber-glow);
+  }
+
+  /* Accent Preset: Indigo Lime */
+  [data-accent="indigo"] {
+    --teal-accent: 239 84% 60%;
+    --royal-violet: 80 61% 40%;
+    --amber-glow: 48 96% 53%;
+    --primary: var(--teal-accent);
+    --secondary: var(--royal-violet);
+    --accent: var(--amber-glow);
+  }
+
+  /* Accent Preset: Ruby Slate */
+  [data-accent="ruby"] {
+    --teal-accent: 347 77% 42%;
+    --royal-violet: 215 25% 27%;
+    --amber-glow: 25 95% 62%;
+    --primary: var(--teal-accent);
+    --secondary: var(--royal-violet);
+    --accent: var(--amber-glow);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  section {
+    scroll-margin-top: 5rem;
+  }
+
+  /* Reduced Motion Support */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+    
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@layer components {
+  /* Hero Buttons */
+  .btn-hero {
+    @apply relative px-8 py-4 rounded-lg font-semibold overflow-hidden transition-all duration-300;
+    @apply bg-primary text-primary-foreground hover:scale-105 hover:shadow-2xl;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+  }
+
+  .btn-hero-secondary {
+    @apply relative px-8 py-4 rounded-lg font-semibold overflow-hidden transition-all duration-300;
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground hover:scale-105;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+  }
+
+  /* Glass Card */
+  .glass-card {
+    @apply bg-card/50 backdrop-blur-xl border border-border/50 rounded-xl shadow-lg;
+    @apply transition-all duration-300 hover:border-primary/50 hover:shadow-primary/20 hover:shadow-2xl;
+  }
+
+  /* Nav Link Underline Animation */
+  .nav-link {
+    @apply relative inline-block text-muted-foreground hover:text-foreground transition-colors duration-300;
+    @apply after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0;
+    @apply after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300;
+    @apply hover:after:scale-x-100 hover:after:origin-bottom-left;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:rounded;
+  }
+
+  .nav-link-active {
+    @apply text-primary after:scale-x-100;
+  }
+
+  /* Timeline Connector */
+  .timeline-line {
+    @apply absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-transparent;
+  }
+
+  /* Skill Card Glow */
+  .skill-card {
+    @apply p-6 rounded-lg bg-card border border-border transition-all duration-300;
+    @apply hover:border-primary hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring;
+  }
+
+  /* Form Input Floating Label */
+  .form-input {
+    @apply w-full px-4 py-3 bg-card border border-input rounded-lg text-foreground;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+    @apply placeholder:text-muted-foreground transition-all duration-300;
+  }
+
+  /* Scroll-to-Top FAB */
+  .scroll-fab {
+    @apply fixed bottom-8 right-8 p-4 rounded-full bg-primary text-primary-foreground shadow-2xl;
+    @apply hover:scale-110 hover:shadow-primary/50 transition-all duration-300;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+    @apply z-50;
+  }
+}
+
+@layer utilities {
+  /* Custom animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -1000px 0; }
+    100% { background-position: 1000px 0; }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s linear infinite;
+    background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.2), transparent);
+    background-size: 1000px 100%;
+  }
+}
