@@ -23,10 +23,10 @@ export function Hero() {
               transition={{ delay: 0.2 }}
             >
               <p className="text-primary text-lg font-semibold mb-2">
-                Hi, I'm {profile.name}
+                Hi, I'm
               </p>
               <h1 className="text-4xl md:text-6xl font-bold mb-4">
-                {profile.tagline}
+                {profile.name}
               </h1>
             </motion.div>
 
