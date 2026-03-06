@@ -88,7 +88,7 @@ export function Hero() {
               <div className="relative glass-card rounded-full overflow-hidden">
                 <img
                   // src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop"
-                  src="/images/profile_yeswanth.png"
+                  src="/images/profile_img1.jpg"
                   alt={profile.name}
                   className="w-full h-full object-cover"
                 />

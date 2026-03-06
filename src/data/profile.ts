@@ -6,7 +6,7 @@ export const profile = {
   email: "Yeswanthch20@gmail.com",
   phone: "+1(928) 600-3747",
   location: "Leander, TX (open to Relocate)",
-  
+
   social: {
     linkedin: "https://www.linkedin.com/in/yeswanthch/",
     email: "mailto:Yeswanthch20@gmail.com",
@@ -14,14 +14,14 @@ export const profile = {
 
   about: {
     summary: `Data Analyst with 5+ years of experience delivering data-driven insights, building analytical datasets, and developing BI dashboards to support operational, product, and strategic decision making. Proficient in SQL, Python, Power BI, Tableau, and Excel, transforming multi-source data into scalable reporting models, KPI frameworks, and executive dashboards. Skilled in exploratory data analysis, statistical modeling, and predictive analytics using Python, identifying trends and supporting data-driven planning.`,
-    
+
     highlights: [
       { label: "Years Experience", value: "5+", icon: "award" },
       { label: "Data accuracy improvement", value: "25%", icon: "activity" },
       { label: "Decision speed increase", value: "35%", icon: "server" },
       { label: "Reporting manual effort reduction", value: "50%", icon: "users" },
     ],
-    
+
     keyStrengths: [
       "SQL Optimization",
       "Predictive Modeling",
@@ -93,7 +93,7 @@ export const profile = {
     {
       title: "Predictive Modeling for Customer Deposits",
       description: "Built predictive classification models using Scikit-learn with Logistic Regression and Random Forest, achieving 88% prediction accuracy for customer subscription likelihood. Presented insights through Tableau and Power BI dashboards.",
-      image: "/images/project-banking.png",
+      image: "/images/project-corporate-dashboard.jpg",
       technologies: ["Python", "Scikit-learn", "Pandas", "Tableau", "Power BI", "SQL"],
       liveUrl: "#",
       codeUrl: "#",
@@ -101,7 +101,7 @@ export const profile = {
     {
       title: "NAU Drone Delivery Service Analytics",
       description: "Integrated operational telemetry, geospatial coordinates, and weather datasets through Python ingestion workflows. Built monitoring dashboards in Power BI visualizing route performance and weather alerts, reducing decision delays by 40%.",
-      image: "/images/project-drone.png",
+      image: "/images/project-vendor-analytics.jpg",
       technologies: ["Python", "Pandas", "SQL", "Power BI", "DAX", "Geospatial Analysis"],
       liveUrl: "#",
       codeUrl: "#",
@@ -109,7 +109,7 @@ export const profile = {
     {
       title: "Customer Churn Analytics",
       description: "Analyzed customer interaction and financial transaction datasets to identify behavioral patterns associated with service churn. Trained classification models using Scikit-learn, achieving 85% churn prediction accuracy.",
-      image: "/images/project-churn.png",
+      image: "/images/project-sales-dashboard.jpg",
       technologies: ["SQL", "Python", "Pandas", "Scikit-learn", "Power BI", "DAX"],
       liveUrl: "#",
       codeUrl: "#",
