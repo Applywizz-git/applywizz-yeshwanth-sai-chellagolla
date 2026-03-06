@@ -23,7 +23,7 @@ export function Header() {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-      
+
       // Update active section based on scroll position
       const sections = navLinks.map(link => link.href.substring(1));
       const current = sections.find(section => {
@@ -34,7 +34,7 @@ export function Header() {
         }
         return false;
       });
-      
+
       if (current) setActiveSection(current);
     };
 
@@ -47,14 +47,14 @@ export function Header() {
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setIsMobileMenuOpen(false);
     };
-    
+
     if (isMobileMenuOpen) {
       document.addEventListener('keydown', handleEsc);
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = '';
     }
-    
+
     return () => {
       document.removeEventListener('keydown', handleEsc);
       document.body.style.overflow = '';
@@ -65,9 +65,8 @@ export function Header() {
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        isScrolled ? 'glass-card py-4' : 'bg-transparent py-6'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isScrolled ? 'glass-card py-4' : 'bg-transparent py-6'
+        }`}
     >
       <nav className="container mx-auto px-4">
         <div className="flex items-center justify-between">
@@ -78,7 +77,7 @@ export function Header() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            WAJAHATHULLAH
+            YESWANTH SAI
           </motion.a>
 
           {/* Desktop Navigation */}
@@ -92,7 +91,7 @@ export function Header() {
                 {link.label}
               </a>
             ))}
-            
+
             <button
               onClick={toggleTheme}
               className="p-2 rounded-lg hover:bg-muted transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
@@ -111,7 +110,7 @@ export function Header() {
             >
               {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </button>
-            
+
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 rounded-lg hover:bg-muted transition-colors"

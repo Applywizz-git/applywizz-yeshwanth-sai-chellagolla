@@ -65,7 +65,7 @@ export function Hero() {
                 <Briefcase className="w-5 h-5 inline-block mr-2" />
                 View Projects
               </a>
-              <a href="/wajahathullah_mohammad_resume.pdf" download className="btn-hero-secondary">
+              <a href="/RESUME_YESWANTH_SAI_CHALLAGOLLA_DA.pdf" download className="btn-hero-secondary">
                 <Download className="w-5 h-5 inline-block mr-2" />
                 Download Resume
               </a>
@@ -88,7 +88,7 @@ export function Hero() {
               <div className="relative glass-card rounded-full overflow-hidden">
                 <img
                   // src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop"
-                  src="/images/profile_img1.jpg"
+                  src="/images/profile_yeswanth.png"
                   alt={profile.name}
                   className="w-full h-full object-cover"
                 />

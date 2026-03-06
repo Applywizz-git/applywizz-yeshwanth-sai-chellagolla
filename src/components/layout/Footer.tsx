@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, ArrowUp } from 'lucide-react';
+import { Linkedin, Mail, ArrowUp } from 'lucide-react';
 import { useThemeStore } from '@/stores/themeStore';
 import { profile } from '@/data/profile';
 
@@ -24,10 +24,10 @@ export function Footer() {
           {/* Brand */}
           <div>
             <h3 className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-4">
-              3D Skillverse
+              Data Insights Hub
             </h3>
             <p className="text-muted-foreground">
-              Building reliable, scalable software at scale
+              Empowering businesses through data storytelling & analytics
             </p>
           </div>
 
@@ -63,11 +63,10 @@ export function Footer() {
                 <button
                   key={item.value}
                   onClick={() => setAccent(item.value)}
-                  className={`px-3 py-1 text-sm rounded-full transition-all ${
-                    accent === item.value
-                      ? 'bg-primary text-primary-foreground'
-                      : 'bg-muted hover:bg-muted/80'
-                  }`}
+                  className={`px-3 py-1 text-sm rounded-full transition-all ${accent === item.value
+                    ? 'bg-primary text-primary-foreground'
+                    : 'bg-muted hover:bg-muted/80'
+                    }`}
                   aria-label={`Set ${item.name} accent`}
                 >
                   {item.name}
@@ -81,7 +80,7 @@ export function Footer() {
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} {profile.name}. All rights reserved.
           </p>
-          
+
           <motion.button
             onClick={scrollToTop}
             className="scroll-fab"
